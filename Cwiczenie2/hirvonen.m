@@ -29,6 +29,7 @@ function WspGeo = hirvonen(X,Y,Z)
     F=F(n)*180/pi
     H=H(n)
     WspGeo=[F,La,H]
+    assignin('base','WspGeo',WspGeo)
 end
 
 

@@ -11,8 +11,8 @@ hirvonen(X,Y,Z)
 sAB=35125.123;
 azAB=(70*pi/180)+33*pi/180;
 zAB=(85*pi/180)+33*pi/(180*60);
-F=ans(1)*pi/180
-La=ans(2)*pi/180
+F=WspGeo(1)*pi/180
+La=WspGeo(2)*pi/180
 xAB=[sAB*sin(zAB)*cos(azAB);sAB*sin(zAB)*sin(azAB);sAB*cos(zAB)]
 R=[-sin(F)*cos(La), -sin(La),  cos(F)*cos(La);
    -sin(F)*sin(La), cos(La),   cos(F)*sin(La);

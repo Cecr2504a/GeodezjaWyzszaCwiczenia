@@ -1,4 +1,4 @@
-function [F,La,H] = hirvonen(X,Y,Z)
+function WspGeo = hirvonen(X,Y,Z)
     A=6378137
     e2=0.00669438002290
     r = sqrt(X^2 + Y^2)
@@ -27,12 +27,8 @@ function [F,La,H] = hirvonen(X,Y,Z)
     Y2=(N(n)+H(n))*cos(F(n))*sin(La)
     Z2=((N(n)*(1-e2))+H(n))*sin(F(n))
     F=F(n)*180/pi
-    Fminuty=(F-fix(F))*60
-    Fsekundy=(Fminuty-fix(Fminuty))*60
-    L=La*180/pi
-    Lminuty=(L-fix(L))*60
-    Lsekundy=(Lminuty-fix(Lminuty))*60
     H=H(n)
+    WspGeo=[F,La,H]
 end
 
 

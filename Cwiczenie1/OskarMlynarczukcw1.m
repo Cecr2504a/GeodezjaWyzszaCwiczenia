@@ -38,6 +38,3 @@ L=La*180/pi
 Lminuty=(L-fix(L))*60
 Lsekundy=(Lminuty-fix(Lminuty))*60
 H=H(n)
-
-
-

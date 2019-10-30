@@ -7,9 +7,9 @@ function [Stminsek]=KatStop(Katw);
         Katstopnie(wd)=fix(Kat(wd));
         Minuty(wd)=(Kat(wd)-fix(Kat(wd)))*60;
         Katminuty(wd)=fix(Minuty(wd));
-        Katsekundy(wd)=(Minuty(wd)-Katminuty(wd))*60;
+        Sekundy(wd)=(Minuty(wd)-Katminuty(wd))*60;
+        Katsekundy(wd)=round(Sekundy(wd),5)
     end
-    Katstopnie
-    Katminuty
-    Katsekundy
+    Stminsek=[Katstopnie;Katminuty;Katsekundy;]
+    assignin('base','Stminsek',Stminsek)
 end

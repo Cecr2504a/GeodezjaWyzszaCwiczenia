@@ -20,4 +20,4 @@ R=[-sin(F)*cos(La), -sin(La),  cos(F)*cos(La);
 Przyrosty=inv(R')*xAB
 WspKartB=WspKart'+Przyrosty
 hirvonen(WspKartB(1),WspKartB(2),WspKartB(3))
-KatStop(ans)
+KatStop(WspGeo)

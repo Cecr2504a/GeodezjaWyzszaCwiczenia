@@ -1,4 +1,4 @@
-function WspGeo = hirvonen(X,Y,Z)
+function Hirvonen = Hirvonen(X,Y,Z)
     A=6378137
     e2=0.00669438002290
     r = sqrt(X^2 + Y^2)
@@ -22,11 +22,11 @@ function WspGeo = hirvonen(X,Y,Z)
         Aws=sqrt(RO^2);
         end
     end
-    La=atan(Y/X)*180/pi
+    La=atan(Y/X)
     X2=(N(n)+H(n))*cos(F(n))*cos(La)
     Y2=(N(n)+H(n))*cos(F(n))*sin(La)
     Z2=((N(n)*(1-e2))+H(n))*sin(F(n))
-    F=F(n)*180/pi
+    F=F(n)
     H=H(n)
     WspGeo=[F,La,H]
     assignin('base','WspGeo',WspGeo)

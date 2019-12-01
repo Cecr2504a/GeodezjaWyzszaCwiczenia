@@ -1,9 +1,9 @@
-function Kivioji=Kivioji(sAB,azAB,zAB,F,La)
+function Kivioji=Kivioji(sAB,azAB,zAB,F,La);
     a=6378137.000;
     e2=0.00669438002290;
     n=sAB/125;
     ds=sAB/n;
-    for i=1:n
+    for i=1:n;
         M=a*(1-e2)/sqrt((1-e2*(sin(F))^2)^3);
         N=a/sqrt(1-e2*(sin(F))^2);
         dfi=(ds*cos(azAB))/M;
@@ -19,9 +19,10 @@ function Kivioji=Kivioji(sAB,azAB,zAB,F,La)
         La=La+dlamb;
         azAB=azAB+dAm;
     end
-    Fb=F;
-    Lab=La;
-    azBA=azAB+pi;
+    Fb=F
+    Lab=La
+    azAB=azAB
+    azBA=azAB+pi
     assignin('base','Fb',Fb)
     assignin('base','Lab',Lab)
     assignin('base','azAB',azAB)
